@@ -101,7 +101,7 @@ void ff_http_auth_handle_header(HTTPAuthState *state, const char *key,
                                state);
         } else if (av_stristart(value, "Digest ", &p) &&
                    state->auth_type <= HTTP_AUTH_DIGEST) {
-            # Auth patch for RTSP
+            // Auth patch for RTSP
             if (!strcmp(state->digest_params.algorithm, "MD5"))
               return;
             state->auth_type = HTTP_AUTH_DIGEST;
